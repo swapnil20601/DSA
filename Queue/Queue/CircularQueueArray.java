@@ -1,18 +1,18 @@
 package Queue;
 
-public class QueueArray {
+public class CircularQueueArray {
     private int[] data;
     private int rear; // index of element at rear of the queue
     private int front; // index of element at front of the queue
     private int size;
 
-    public QueueArray() {
+    public CircularQueueArray() {
         data = new int[5];
         rear = -1;
         front = -1;
     }
 
-    public QueueArray(int capacity) {
+    public CircularQueueArray(int capacity) {
         data = new int[capacity];
         rear = -1;
         front = -1;
@@ -100,5 +100,6 @@ public class QueueArray {
                 System.out.print(val+" ");
             }
         }
+        System.out.println();
     }
 }

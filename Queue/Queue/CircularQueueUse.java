@@ -1,9 +1,9 @@
 package Queue;
 
-public class QueueUse{
-    public static void main(String[] args) {
+public class CircularQueueUse{
+    public static void main(String[] args) throws QueueEmptyException {
 
-        QueueArray queue = new QueueArray();
+        CircularQueueArray queue = new CircularQueueArray();
         int[] arr = {10,20,30,40};
 
         for (int ele : arr) {
@@ -16,6 +16,10 @@ public class QueueUse{
         }
 
         queue.printQueue();
-        
+        System.out.println(queue.size());
+
+        while (!queue.isEmpty()) {
+            System.out.println(queue.dequeue());
+        }
     }
 }
