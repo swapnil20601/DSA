@@ -38,9 +38,9 @@ public class CircularQueueArray {
         return rear;
     }
 
-    public void enqueue(int val) throws QueueEmptyException {
+    public void enqueue(int val) throws QueueFullExeception {
         if (size == data.length) {
-            doubleCapacity();
+            throw new QueueFullExeception();
         }
 
         if (size == 0) {
@@ -59,16 +59,6 @@ public class CircularQueueArray {
 
         data[rear] = val;
         size++;
-    }
-
-    private void doubleCapacity() {
-        int[] temp = data;
-        data = new int[temp.length * 2];
-        for (int i = 0; i < temp.length; i++) {
-            data[i] = temp[i];
-        }
-        front = 0;
-        rear = temp.length - 1;
     }
 
     public int dequeue() throws QueueEmptyException {
