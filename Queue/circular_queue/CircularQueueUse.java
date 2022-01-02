@@ -1,4 +1,4 @@
-package Queue;
+package circular_queue;
 
 public class CircularQueueUse {
     public static void main(String[] args) throws QueueEmptyException, QueueFullExeception {
