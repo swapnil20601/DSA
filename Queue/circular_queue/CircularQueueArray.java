@@ -1,4 +1,4 @@
-package Queue;
+package circular_queue;
 
 public class CircularQueueArray {
     private int[] data;

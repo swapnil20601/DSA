@@ -1,0 +1,1 @@
+In dynamic array, when we reach out of array size, then instead of throwing QueueFullException, we double the capacity of Array
