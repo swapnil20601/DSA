@@ -7,44 +7,48 @@ public class CircularQueueArray {
     private int size;
 
     public CircularQueueArray() {
-        data = new int[5];
-        rear = -1;
-        front = -1;
+        this.data = new int[5];
+        this.rear = -1;
+        this.front = -1;
     }
 
     public CircularQueueArray(int capacity) {
-        data = new int[capacity];
-        rear = -1;
-        front = -1;
+        this.data = new int[capacity];
+        this.rear = -1;
+        this.front = -1;
     }
 
     public int size() {
-        return size;
+        return this.size;
     }
 
     public boolean isEmpty() {
-        return front == -1;
+        return this.front == -1;
     }
 
     public int front() throws QueueEmptyException {
-        if (size == 0) {
+        if (this.size == 0) {
             throw new QueueEmptyException();
         }
 
-        return data[front];
+        return this.data[this.front];
     }
 
-    public int rear() {
-        return rear;
+    public int rear() throws QueueEmptyException {
+        if (this.size == 0) {
+            throw new QueueEmptyException();
+        }
+
+        return this.data[this.rear];
     }
 
     public void enqueue(int val) throws QueueFullExeception {
-        if (size == data.length) {
+        if (this.size == this.data.length) {
             throw new QueueFullExeception();
         }
 
-        if (size == 0) {
-            front++; // or front = 0
+        if (this.size == 0) {
+            this.front++; // or front = 0
         }
 
         /*
@@ -55,30 +59,30 @@ public class CircularQueueArray {
          * rear moves out of array but you still have room for a new element at 0th
          * index.
          */
-        rear = (rear + 1) % data.length;
+        this.rear = (this.rear + 1) % this.data.length;
 
-        data[rear] = val;
-        size++;
+        this.data[this.rear] = val;
+        this.size++;
     }
 
     public int dequeue() throws QueueEmptyException {
-        if (size == 0) {
+        if (this.size == 0) {
             throw new QueueEmptyException();
         }
 
-        int temp = data[front];
+        int temp = this.data[this.front];
 
          /*
          * Similar to enqueue, if front moves out of array & if there are elements in queue
          * that can be deleted then we move front back to 0. 
          */
 
-        front = (front + 1) % data.length;
-        size--;
+        this.front = (this.front + 1) % this.data.length;
+        this.size--;
 
-        if (size == 0) {
-            front = -1;
-            rear = -1;
+        if (this.size == 0) {
+            this.front = -1;
+            this.rear = -1;
         }
 
         return temp;
