@@ -1,12 +1,12 @@
-package queue_stacks.queue_using_2_stacks;
+package queue_stacks.queue_using_stacks;
 
 import java.util.Stack;
 
-public class QueueUsingStacks {
+public class Solution1 {
     private Stack<Integer> stack1;
     private Stack<Integer> stack2;
 
-    public QueueUsingStacks(){
+    public Solution1(){
         this.stack1 = new Stack<>();
         this.stack2 = new Stack<>();
     }
