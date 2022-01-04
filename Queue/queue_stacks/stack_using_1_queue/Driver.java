@@ -1,7 +1,5 @@
 package queue_stacks.stack_using_1_queue;
 
-import java.util.LinkedList;
-
 public class Driver {
     public static void main(String[] args) {
         StackUsingQueue<Integer> stk = new StackUsingQueue<>();
@@ -14,4 +12,5 @@ public class Driver {
         stk.pop();
         System.out.println(stk.top());
     }
+    
 }
