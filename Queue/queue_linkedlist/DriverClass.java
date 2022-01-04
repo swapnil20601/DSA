@@ -19,13 +19,11 @@ public class DriverClass {
         try {
             System.out.println("Front is "+queue.front());
         } catch (QueueEmptyException e2) {
-            // TODO Auto-generated catch block
             e2.printStackTrace();
         }
         try {
             System.out.println("Rear is "+queue.rear());
         } catch (QueueEmptyException e1) {
-            // TODO Auto-generated catch block
             e1.printStackTrace();
         }
 
@@ -33,7 +31,6 @@ public class DriverClass {
             try {
                 System.out.println(queue.dequeue());
             } catch (QueueEmptyException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
@@ -44,13 +41,11 @@ public class DriverClass {
         try {
             System.out.println("Front is "+queue.front());
         } catch (QueueEmptyException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         try {
             System.out.println("Rear is "+queue.rear());
         } catch (QueueEmptyException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
