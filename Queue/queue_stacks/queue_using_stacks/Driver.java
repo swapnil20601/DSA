@@ -1,8 +1,8 @@
-package queue_stacks.queue_using_2_stacks;
+package queue_stacks.queue_using_stacks;
 
 public class Driver {
     public static void main(String[] args) {
-        QueueUsingStacks q = new QueueUsingStacks();
+        Solution1 q = new Solution1();
         
         int[] arr ={10,20,30,40};
 
