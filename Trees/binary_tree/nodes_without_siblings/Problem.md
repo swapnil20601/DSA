@@ -2,6 +2,7 @@
 
 
 ### For a given Binary Tree of type integer, print all the nodes without any siblings.
+### Similar leetocde question: *https://leetcode.com/problems/find-all-the-lonely-nodes/*
 
 **Input Format:**
 The first and the only line of input will contain the node data, all separated by a single space. Since -1 is used as an indication whether the left or right node data exist for root, it will not be a part of the node data.
