@@ -10,8 +10,8 @@ public class Solution {
         }
                 
         int leftHeight = height(root.left);
-        int righttHeight = height(root.right);
+        int rightHeight = height(root.right);
         
-        return 1 + Math.max(leftHeight, righttHeight);
+        return 1 + Math.max(leftHeight, rightHeight);
 	}
 }
