@@ -39,7 +39,7 @@ public class isBalancedOptimized {
             isBal = false;
         }
 
-        int height = 1 + Math.min(leftOutput.height, rightOutput.height);
+        int height = 1 + Math.max(leftOutput.height, rightOutput.height);
 
         return new BalancedTree(height, isBal);
     }
