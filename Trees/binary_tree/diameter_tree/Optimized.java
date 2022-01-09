@@ -10,13 +10,13 @@ import binary_tree.Node;
  */
 public class Optimized {
 
-    private static DiaPair diameterHeight(Node<Integer> root){
+    private static DiaPair<Integer,Integer> diameterHeight(Node<Integer> root){
         if(root == null){
-            return new DiaPair(0, 0);
+            return new DiaPair<Integer,Integer>(0, 0);
         }
 
-        DiaPair leftOutput = diameterHeight(root.left);
-        DiaPair rightOutput = diameterHeight(root.right);
+        DiaPair<Integer,Integer> leftOutput = diameterHeight(root.left);
+        DiaPair<Integer,Integer> rightOutput = diameterHeight(root.right);
         int height = 1 + Math.max(leftOutput.height, rightOutput.height);
 
         int leftRightDiameter = leftOutput.height + rightOutput.height;
@@ -25,7 +25,7 @@ public class Optimized {
 
         int diameter = Math.max(leftRightDiameter, Math.max(leftDiameter, rightDiameter));
 
-        return new DiaPair(height, diameter);
+        return new DiaPair<Integer,Integer>(height, diameter);
     }    
 
     public static int diameterOfBinaryTree(Node<Integer> root){
@@ -33,11 +33,11 @@ public class Optimized {
     }
 }
 
-class DiaPair {
-    int height;
-    int diamater;
+class DiaPair<T,E> {
+    T height;
+    E diamater;
 
-    public DiaPair(int height, int diameter){
+    public DiaPair(T height, E diameter){
         this.diamater = diameter;
         this.height = height;
     }
