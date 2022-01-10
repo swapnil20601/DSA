@@ -1,6 +1,6 @@
 package binary_tree.balanced_tree;
 
-import binary_tree.Node;
+import binary_tree.BinaryTreeNode;
 
 /*WAP to check if the tree is balanced?
 A tree is said to be balanced if height of left subtree - height of right subtree <= 1.
@@ -22,7 +22,7 @@ balanced or not & then call recusrion again on left & right subtree.
 */
 public class isBalancedOptimized {
 
-    private static BalancedTree isBalancedBetter(Node<Integer> root){
+    private static BalancedTree isBalancedBetter(BinaryTreeNode<Integer> root){
         if(root == null){
             return new BalancedTree(0, true);
         }
@@ -44,7 +44,7 @@ public class isBalancedOptimized {
         return new BalancedTree(height, isBal);
     }
 
-    public static boolean isBalanced(Node<Integer> root){
+    public static boolean isBalanced(BinaryTreeNode<Integer> root){
         BalancedTree ans = isBalancedBetter(root);
         return ans.isBalanced;
     }

@@ -1,6 +1,6 @@
 package binary_tree.diameter_tree;
 
-import binary_tree.Node;
+import binary_tree.BinaryTreeNode;
 
 /**
  * We can optimize the naive soln by creating the class whose object we give us both height & diamter of both left &
@@ -10,7 +10,7 @@ import binary_tree.Node;
  */
 public class Optimized {
 
-    private static DiaPair<Integer,Integer> diameterHeight(Node<Integer> root){
+    private static DiaPair<Integer,Integer> diameterHeight(BinaryTreeNode<Integer> root){
         if(root == null){
             return new DiaPair<Integer,Integer>(0, 0);
         }
@@ -28,7 +28,7 @@ public class Optimized {
         return new DiaPair<Integer,Integer>(height, diameter);
     }    
 
-    public static int diameterOfBinaryTree(Node<Integer> root){
+    public static int diameterOfBinaryTree(BinaryTreeNode<Integer> root){
         return diameterHeight(root).diamater;
     }
 }

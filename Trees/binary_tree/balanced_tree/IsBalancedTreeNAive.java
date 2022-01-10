@@ -1,6 +1,6 @@
 package binary_tree.balanced_tree;
 
-import binary_tree.Node;
+import binary_tree.BinaryTreeNode;
 import binary_tree.height_of_BT.Solution;
 
 /*WAP to check if the tree is balanced?
@@ -17,7 +17,7 @@ Eg: Check balanceness for following tree. Output = false
           6           7
 */
 public class IsBalancedTreeNAive {
-    public static boolean isBalanced(Node<Integer> root){
+    public static boolean isBalanced(BinaryTreeNode<Integer> root){
         /*if root itself is null, then it means tree is balanced */
         if(root == null){
             return true;

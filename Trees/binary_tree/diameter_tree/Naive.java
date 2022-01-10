@@ -1,6 +1,6 @@
 package binary_tree.diameter_tree;
 
-import binary_tree.Node;
+import binary_tree.BinaryTreeNode;
 
 /**
  * This is O(N*N) time soln. Becoz we are calling height() repeatedly after
@@ -16,7 +16,7 @@ import binary_tree.Node;
  * https://www.youtube.com/watch?v=rrXAISjtbAA
  */
 public class Naive {
-    private static int height(Node<Integer> root) {
+    private static int height(BinaryTreeNode<Integer> root) {
         if (root == null) {
             return 0;
         }
@@ -27,7 +27,7 @@ public class Naive {
         return 1 + Math.max(leftHeight, rightHeight);
     }
 
-    public static int diameterOfBinaryTree(Node<Integer> root) {
+    public static int diameterOfBinaryTree(BinaryTreeNode<Integer> root) {
         // Your code goes here
         if (root == null) {
             return 0;

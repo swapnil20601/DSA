@@ -1,7 +1,7 @@
 package binary_tree;
 
 public class SumOfNodes {
-    public static int getSum(Node<Integer> root) {
+    public static int getSum(BinaryTreeNode<Integer> root) {
 		//Your code goes here.
         if(root == null){
             return 0;

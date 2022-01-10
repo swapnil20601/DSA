@@ -1,9 +1,9 @@
 package binary_tree.number_of_nodes_greater_than_X;
 
-import binary_tree.Node;
+import binary_tree.BinaryTreeNode;
 
 public class NodesGreaterThanX {
-    public static int countNodesGreaterThanX(Node<Integer> root, int x) {
+    public static int countNodesGreaterThanX(BinaryTreeNode<Integer> root, int x) {
         if (root == null) {
             return 0;
         }

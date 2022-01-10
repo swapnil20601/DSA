@@ -5,7 +5,7 @@ package binary_tree;
  */
 
 public class RemoveLeaves {
-    public static Node<Integer> removeLeaves(Node<Integer> root){
+    public static BinaryTreeNode<Integer> removeLeaves(BinaryTreeNode<Integer> root){
         if(root == null){
             return null;
         }

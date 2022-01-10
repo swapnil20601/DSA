@@ -1,10 +1,10 @@
 package binary_tree.replace_node_with_depth;
 
-import binary_tree.Node;
+import binary_tree.BinaryTreeNode;
 
 public class Solution {
 	
-    public static void helper(Node<Integer> root, int depth){
+    public static void helper(BinaryTreeNode<Integer> root, int depth){
         if(root == null){
             return;
         }
@@ -15,7 +15,7 @@ public class Solution {
         helper(root.right, depth+1);
     }
     
-	public static void changeToDepthTree(Node<Integer> root) {
+	public static void changeToDepthTree(BinaryTreeNode<Integer> root) {
 	    helper(root, 0);
 	}
 

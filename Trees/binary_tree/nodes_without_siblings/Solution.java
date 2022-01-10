@@ -1,9 +1,9 @@
 package binary_tree.nodes_without_siblings;
 
-import binary_tree.Node;
+import binary_tree.BinaryTreeNode;
 
 public class Solution {
-    public static void printNodesWithoutSibling(Node<Integer> root) {
+    public static void printNodesWithoutSibling(BinaryTreeNode<Integer> root) {
 		//Your code goes here
         if(root == null){
             return;

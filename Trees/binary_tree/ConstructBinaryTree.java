@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ConstructBinaryTree {
     Scanner s = new Scanner(System.in);
 
-    public void printTree(Node<Integer> root){
+    public void printTree(BinaryTreeNode<Integer> root){
         if(root == null){
             return;
         }
@@ -25,7 +25,7 @@ public class ConstructBinaryTree {
         printTree(root.right);
     }
 
-    public Node<Integer> constructTree(boolean isRoot, boolean isLeft, int parentData){
+    public BinaryTreeNode<Integer> constructTree(boolean isRoot, boolean isLeft, int parentData){
         if(isRoot){
             System.out.println("Enter root data: ");
         } else {
@@ -43,7 +43,7 @@ public class ConstructBinaryTree {
             return null;
         }
 
-        Node<Integer> root = new Node<>(rootData);
+        BinaryTreeNode<Integer> root = new BinaryTreeNode<>(rootData);
         root.left = constructTree(false, true, root.data);
         root.right = constructTree(false, false, root.data);
         return root;
@@ -53,7 +53,7 @@ public class ConstructBinaryTree {
 
     public static void main(String[] args) {
         ConstructBinaryTree tree = new ConstructBinaryTree();
-        Node<Integer> root = tree.constructTree(true, true, 34);
+        BinaryTreeNode<Integer> root = tree.constructTree(true, true, 34);
         tree.printTree(root);
     }
 

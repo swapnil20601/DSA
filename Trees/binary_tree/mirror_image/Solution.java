@@ -1,9 +1,9 @@
 package binary_tree.mirror_image;
 
-import binary_tree.Node;
+import binary_tree.BinaryTreeNode;
 
 public class Solution {
-    public static void mirrorBinaryTree(Node<Integer> root){
+    public static void mirrorBinaryTree(BinaryTreeNode<Integer> root){
         //Your code goes here
         if(root == null){
             return;
@@ -15,7 +15,7 @@ public class Solution {
         }
         
         //if root is not not leaf, then swap left & right subtrees
-        Node<Integer> temp = root.left;
+        BinaryTreeNode<Integer> temp = root.left;
         root.left = root.right;
         root.right = temp;
         

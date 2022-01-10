@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
 
-import binary_tree.Node;
+import binary_tree.BinaryTreeNode;
 
 /**
  * Similar Leetcode problem: https://leetcode.com/problems/binary-tree-level-order-traversal/
@@ -14,9 +14,9 @@ import binary_tree.Node;
  */
 public class LevelOrder {
     Scanner s = new Scanner(System.in);
-    Queue<Node<Integer>> queue = new LinkedList<>();
+    Queue<BinaryTreeNode<Integer>> queue = new LinkedList<>();
 
-    public Node<Integer> constructTreeLevelWise(){
+    public BinaryTreeNode<Integer> constructTreeLevelWise(){
         System.out.println("Enter root: ");
         int rootData = s.nextInt();
 
@@ -24,17 +24,17 @@ public class LevelOrder {
             return null;
         }
 
-        Node<Integer> root = new Node<Integer>(rootData);
+        BinaryTreeNode<Integer> root = new BinaryTreeNode<Integer>(rootData);
         queue.add(root);
 
         while(!queue.isEmpty()){
-            Node<Integer> parent = queue.poll();
+            BinaryTreeNode<Integer> parent = queue.poll();
 
             //Ask user for leftchild & attach it to parent's left & add it to queue
             System.out.println("Enter left child of "+parent.data);
             int leftChildData = s.nextInt();
             if(leftChildData != -1){
-                Node<Integer> leftChild = new Node<Integer>(leftChildData);
+                BinaryTreeNode<Integer> leftChild = new BinaryTreeNode<Integer>(leftChildData);
                 parent.left = leftChild;
                 queue.add(leftChild);
             }
@@ -43,7 +43,7 @@ public class LevelOrder {
             System.out.println("Enter right child of "+parent.data);
             int rightChildData = s.nextInt();
             if(rightChildData != -1){
-                Node<Integer> rightChild = new Node<Integer>(rightChildData);
+                BinaryTreeNode<Integer> rightChild = new BinaryTreeNode<Integer>(rightChildData);
                 parent.right = rightChild;
                 queue.add(rightChild);
             }
@@ -54,17 +54,17 @@ public class LevelOrder {
 
     
     //For printing data Level wise
-    public static void printLevelWise(Node<Integer> root) {
+    public static void printLevelWise(BinaryTreeNode<Integer> root) {
 		//Your code goes here
         if(root == null){
             return;
         }
 
-        Queue<Node<Integer>> queue = new LinkedList<>();
+        Queue<BinaryTreeNode<Integer>> queue = new LinkedList<>();
         queue.add(root);
 
         while(!queue.isEmpty()){
-            Node<Integer> node = queue.poll();
+            BinaryTreeNode<Integer> node = queue.poll();
             System.out.print(node.data+":");
 
             if(node.left != null){
@@ -87,13 +87,13 @@ public class LevelOrder {
     
     
     //In case you want to return List of List of children. This is in Leetcode
-    public List<List<Integer>> levelOrder(Node<Integer> root) {
+    public List<List<Integer>> levelOrder(BinaryTreeNode<Integer> root) {
         if(root == null){
             return new ArrayList<>();
         }
 
         List<List<Integer>> list = new ArrayList<>();
-        Queue<Node<Integer>> q = new LinkedList<>();
+        Queue<BinaryTreeNode<Integer>> q = new LinkedList<>();
         
         q.add(root);
 
@@ -101,7 +101,7 @@ public class LevelOrder {
             List<Integer> temp = new ArrayList<>(q.size());
 
             for (int i = q.size(); i > 0; i--) {
-                Node<Integer> node = q.poll();
+                BinaryTreeNode<Integer> node = q.poll();
                 temp.add(node.data);
                 if(node.left != null) q.add(node.left);
                 if(node.right != null) q.add(node.right);
@@ -114,7 +114,7 @@ public class LevelOrder {
 
     public static void main(String[] args) {
         LevelOrder level = new  LevelOrder();
-        Node<Integer> n = level.constructTreeLevelWise();
+        BinaryTreeNode<Integer> n = level.constructTreeLevelWise();
         printLevelWise(n);
 
         // List<List<Integer>> ans = level.levelOrder(n);

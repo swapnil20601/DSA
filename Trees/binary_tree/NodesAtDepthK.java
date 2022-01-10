@@ -14,7 +14,7 @@ package binary_tree;
  * 
  */
 public class NodesAtDepthK {
-    public static void printArDepthK(Node<Integer> root, int k){
+    public static void printArDepthK(BinaryTreeNode<Integer> root, int k){
         if(root == null){
             return;
         }

@@ -2,7 +2,7 @@ package binary_tree;
 
 public class NumberOfNodes {
 
-    public int countNodes(Node<Integer> root) {
+    public int countNodes(BinaryTreeNode<Integer> root) {
         if(root == null){
             return 0;
         }
