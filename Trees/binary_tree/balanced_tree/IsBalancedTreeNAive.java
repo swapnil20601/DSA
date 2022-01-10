@@ -16,7 +16,7 @@ Eg: Check balanceness for following tree. Output = false
            /         \
           6           7
 */
-public class IsBalancedTree {
+public class IsBalancedTreeNAive {
     public static boolean isBalanced(Node<Integer> root){
         /*if root itself is null, then it means tree is balanced */
         if(root == null){
