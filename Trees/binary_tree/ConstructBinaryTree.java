@@ -1,6 +1,6 @@
 package binary_tree;
 
-import java.util.Scanner;
+import java.util.Scanner;;
 
 public class ConstructBinaryTree {
     Scanner s = new Scanner(System.in);
