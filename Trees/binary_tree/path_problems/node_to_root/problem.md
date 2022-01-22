@@ -11,7 +11,7 @@ You are given a partially written BinaryTree class. You are given an element. Yo
             /    \
            30     70
 
-**OutPut:** [70, 62, 75, 58]
+**OutPut:** [70, 62, 75, 50]
 
 
 **Steps:**
