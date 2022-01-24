@@ -35,3 +35,11 @@ public class Solution {
         return list;
     }
 }
+
+
+/**
+ * Similarly you can find node to root path in BST. The onlt diff will be;
+ *  1. If (target < root.data) --> then lines 21 to 25 will execute 
+ *  2. Else ---> lines 28 to 32 will execute
+ * 
+ */
