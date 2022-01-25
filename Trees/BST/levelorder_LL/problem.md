@@ -19,7 +19,7 @@ Level 2 = 6 10
 Level 3 = 2 3 
 Level 4 = 9
 
-Sample Input 2:
+Sample Input 2:     
 1 2 3 4 5 6 -1 -1 -1 9 -1 -1 7 -1 -1 8 -1
 
 Output:

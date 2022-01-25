@@ -20,7 +20,8 @@
 > 5. https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/
 ***Similar to https://github.com/swapnil20601/DSA/tree/main/Trees/BST/replace_with_sum***
 
-> 6. 
+> 6. https://leetcode.com/problems/binary-tree-right-side-view/
+***Similar to https://github.com/swapnil20601/DSA/tree/main/Trees/BST/levelorder_LL. Try recursive approch too***
 
 
 # Design

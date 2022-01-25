@@ -7,7 +7,9 @@ import binary_tree.BinaryTreeNode;
 **OPTIMIZED SOUTION**
 
 
-In naive approach we are calling recursion to find maximum key from letsubtree & minimum key from right subtree. Then we are checking if root > that max key from leftsubtree & root <= minimum key from right subtree. And again we are calling recusrion on left subtree & right subtree to check above 2 conditions. So we are making redundant recusrion calls on each & every node. 
+In naive approach we are calling recursion to find maximum key from letsubtree & minimum key from right subtree. 
+Then we are checking if root > that max key from leftsubtree & root <= minimum key from right subtree. 
+And again we are calling recusrion on left subtree & right subtree to check above 2 conditions. So we are making redundant recusrion calls on each & every node. 
 
 This can be optimized by creating an object which returns all these 3 values at once,i.e, int maximum, int minimum , bolean isBST. The idea is same as that we did in checking a balanced tree & to calculate diameter.
 
