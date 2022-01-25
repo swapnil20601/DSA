@@ -4,7 +4,7 @@ import binary_tree.BinaryTreeNode;
 
 /**
  * For undersatnding the solution, check dry run images attached in problem.md file.
- * We are basically usinf min & max range & checking if root lies betoween that range. IF not, then we direvtly return false
+ * We are basically usinf min & max range & checking if root lies betoween that range. IF not, then we directly return false
  * otherwise we update range for the next root comparison in the next recursive call
  */
 public class BetterSol {
