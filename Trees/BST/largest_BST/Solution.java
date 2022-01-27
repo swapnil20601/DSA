@@ -31,8 +31,8 @@ public class Solution {
         Pair leftOutput = helper(root.left);
         Pair rightOutput = helper(root.right);
 
-        int minVal = Math.min(root.data, Math.min(leftOutput.min, rightOutput.min));
-        int maxVal = Math.max(root.data, Math.min(leftOutput.max, rightOutput.max));
+        int minVal = Math.min(root.data, leftOutput.min);
+        int maxVal = Math.max(root.data, rightOutput.max);
         boolean iscurrentBST = true;
 
         if(!leftOutput.isBST || !rightOutput.isBST){

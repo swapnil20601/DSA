@@ -1,8 +1,10 @@
 {
     "java.project.sourcePaths": [
         "Trees",
+        "Recursion",
         "Queue",
+        "HashTable",
         "BasicProblems",
-        "Recursion"
+        "SDESheet"
     ]
 }
