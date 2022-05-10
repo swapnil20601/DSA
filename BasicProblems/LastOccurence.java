@@ -1,5 +1,11 @@
 public class LastOccurence {
 
+    /**
+     * Find Last occurence of an element in a sorted array
+     * Algo: Use Binary search
+     * Video: https://www.youtube.com/watch?v=OE7wUUpJw6I
+     * Question: https://www.geeksforgeeks.org/find-first-and-last-positions-of-an-element-in-a-sorted-array/
+     */
     public static int getLastOccurence(int[] arr, int key) {
         int low = 0, high = arr.length-1, res = -1;
 
@@ -17,7 +23,7 @@ public class LastOccurence {
                 high = mid-1;
             }
         }
-        
+
         return res;
     }
 
