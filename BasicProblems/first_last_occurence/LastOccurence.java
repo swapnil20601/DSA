@@ -1,3 +1,4 @@
+package first_last_occurence;
 public class LastOccurence {
 
     /**
