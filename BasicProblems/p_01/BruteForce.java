@@ -1,6 +1,9 @@
 package p_01;
 
 /**
+ * Question: https://www.tutorialcup.com/interview/hashing/cumulative-frequency-of-count-of-each-element-in-an-unsorted-array.htm
+ * 
+ * 
  * Varoables" cum_fre = 0 & count = 1(for every i==j)
  * 1) Go through each ele in arr using i & see if it is not -inf. If it is not -inf then only enter inner for loop,  else skip that iteration
  * 2) For every ith ele see if that ele exists in arr by using j startoing from j = i+1
